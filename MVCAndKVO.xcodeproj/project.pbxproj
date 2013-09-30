@@ -21,6 +21,8 @@
 		CA856C2B17F97C1E00E49B37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA856C0D17F97C1E00E49B37 /* UIKit.framework */; };
 		CA856C3317F97C1E00E49B37 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA856C3117F97C1E00E49B37 /* InfoPlist.strings */; };
 		CA856C3517F97C1E00E49B37 /* MVCAndKVOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA856C3417F97C1E00E49B37 /* MVCAndKVOTests.m */; };
+		CA856C4017F97C3800E49B37 /* PersonModule.m in Sources */ = {isa = PBXBuildFile; fileRef = CA856C3F17F97C3800E49B37 /* PersonModule.m */; };
+		CA856C4317F97C6400E49B37 /* PersonView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA856C4217F97C6400E49B37 /* PersonView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		CA856C3017F97C1E00E49B37 /* MVCAndKVOTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MVCAndKVOTests-Info.plist"; sourceTree = "<group>"; };
 		CA856C3217F97C1E00E49B37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CA856C3417F97C1E00E49B37 /* MVCAndKVOTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCAndKVOTests.m; sourceTree = "<group>"; };
+		CA856C3E17F97C3800E49B37 /* PersonModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonModule.h; sourceTree = "<group>"; };
+		CA856C3F17F97C3800E49B37 /* PersonModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonModule.m; sourceTree = "<group>"; };
+		CA856C4117F97C6400E49B37 /* PersonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonView.h; sourceTree = "<group>"; };
+		CA856C4217F97C6400E49B37 /* PersonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,10 @@
 				CA856C1B17F97C1E00E49B37 /* Main.storyboard */,
 				CA856C1E17F97C1E00E49B37 /* ViewController.h */,
 				CA856C1F17F97C1E00E49B37 /* ViewController.m */,
+				CA856C3E17F97C3800E49B37 /* PersonModule.h */,
+				CA856C3F17F97C3800E49B37 /* PersonModule.m */,
+				CA856C4117F97C6400E49B37 /* PersonView.h */,
+				CA856C4217F97C6400E49B37 /* PersonView.m */,
 				CA856C2117F97C1E00E49B37 /* Images.xcassets */,
 				CA856C1017F97C1E00E49B37 /* Supporting Files */,
 			);
@@ -250,7 +260,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA856C2017F97C1E00E49B37 /* ViewController.m in Sources */,
+				CA856C4317F97C6400E49B37 /* PersonView.m in Sources */,
 				CA856C1A17F97C1E00E49B37 /* AppDelegate.m in Sources */,
+				CA856C4017F97C3800E49B37 /* PersonModule.m in Sources */,
 				CA856C1617F97C1E00E49B37 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
