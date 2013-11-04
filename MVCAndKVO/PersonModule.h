@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PersonModule : NSObject
+@interface PersonModule : NSObject{
+    @private
+    int _age;
+}
 @property (nonatomic, strong) NSString* name;
 @property (nonatomic, strong) NSString* telephone;
 @property (nonatomic, strong) NSString* address;

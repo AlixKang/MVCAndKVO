@@ -42,7 +42,9 @@
                                                       range:NSMakeRange(0, telephone.length)];
     
     if (match){
+        [self willChangeValueForKey:@"telephone"];
         _telephone = telephone;
+        [self didChangeValueForKey:@"telephone"];
     }
 }
 - (void)setEmail:(NSString *)email{
@@ -65,7 +67,9 @@
                                                       range:NSMakeRange(0, email.length)];
     
     if (match){
+        [self willChangeValueForKey:@"email"];
         _email = email;
+        [self didChangeValueForKey:@"email"];
     }
 }
 - (void)setBirthday:(NSDate *)birthday{
@@ -75,12 +79,26 @@
     int year = birthday.getYear;
     int yearNow = [NSDate date].getYear;
     yearNow -= year;
-    if (year > 0 && year < 125) {
+    if (yearNow > 0 && yearNow < 125) {
         _birthday = birthday;
+        _age = yearNow;
     }
 }
 - (int)age{
-    NSDate* now = [NSDate date];
-    return [now getYear] - _birthday.getYear;
+    return _age;
+}
++ (BOOL)automaticallyNotifiesObserversForKey:(NSString *)key{
+    BOOL automatic = NO;
+    // KVC 中的是否主动 通知 监听对象某个@Property 值改变
+    if ([key isEqualToString:@"address"]) {
+        automatic = NO;
+    } else if ([key isEqualToString:@"age"]){
+        automatic = NO;
+    } else if ([key isEqualToString:@"birthday"]){
+        automatic = NO;
+    } else {
+        automatic = [super automaticallyNotifiesObserversForKey:key];
+    }
+    return automatic;
 }
 @end

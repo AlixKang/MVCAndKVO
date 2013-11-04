@@ -46,6 +46,7 @@
                         telephone:_personModule.telephone];
     
     [_personModule addObserver:self forKeyPath:@"birthday" options:NSKeyValueObservingOptionNew context:NULL];
+    [_personModule addObserver:self forKeyPath:@"age" options:NSKeyValueObservingOptionNew context:NULL];
  }
 
 - (NSString*)telephoneWithPersonView:(PersonView*)personView;{
@@ -54,10 +55,10 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     NSDateFormatter* formatter = [NSDateFormatter new];
     formatter.dateFormat = @"yyyyMMddHHmmss";
-    int year = rand() % 1000 + 1000;
+    int year = 2013 - rand() % 125;
     NSString* dateString = [NSString stringWithFormat:@"%04d1010101010", year];
     _personModule.birthday = [formatter dateFromString:dateString];
-    NSLog(@"pAge :%d", _personModule.age);
+    NSLog(@"pAge :%@  %@ %d", _personModule.birthday, dateString, _personModule.age);
 }
 - (void)nameLabelWasClickedWithPersonView:(PersonView*)personView;{
     NSLog(@"%@ %@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
@@ -76,6 +77,9 @@
                                   age:_personModule.age
                                 email:_personModule.email
                             telephone:_personModule.telephone];
+    }
+    if ([keyPath isEqualToString:@"age"]){
+        NSLog(@"Age was changed");
     }
 }
 @end
