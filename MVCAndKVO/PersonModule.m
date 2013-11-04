@@ -81,7 +81,12 @@
     yearNow -= year;
     if (yearNow > 0 && yearNow < 125) {
         _birthday = birthday;
+        
+        // @selecotr(automaticallyNotifiesObserversForKey:) 中 ---
+        // 'age' 对应的'value'改变时, '手动通知监听对象'
+        [self willChangeValueForKey:@"age"];
         _age = yearNow;
+        [self didChangeValueForKey:@"age"];
     }
 }
 - (int)age{

@@ -58,7 +58,6 @@
     int year = 2013 - rand() % 125;
     NSString* dateString = [NSString stringWithFormat:@"%04d1010101010", year];
     _personModule.birthday = [formatter dateFromString:dateString];
-    NSLog(@"pAge :%@  %@ %d", _personModule.birthday, dateString, _personModule.age);
 }
 - (void)nameLabelWasClickedWithPersonView:(PersonView*)personView;{
     NSLog(@"%@ %@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
