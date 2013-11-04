@@ -88,7 +88,7 @@
     return _age;
 }
 + (BOOL)automaticallyNotifiesObserversForKey:(NSString *)key{
-    BOOL automatic = NO;
+    BOOL automatic = NO;    // @NO 改变时'默认'不通知
     // KVC 中的是否主动 通知 监听对象某个@Property 值改变
     if ([key isEqualToString:@"address"]) {
         automatic = NO;
