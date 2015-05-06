@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA5FDB5F1AFA17670067D293 /* UITextField+DisablePaste.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5FDB5E1AFA17670067D293 /* UITextField+DisablePaste.m */; };
 		CA856C0A17F97C1E00E49B37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA856C0917F97C1E00E49B37 /* Foundation.framework */; };
 		CA856C0C17F97C1E00E49B37 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA856C0B17F97C1E00E49B37 /* CoreGraphics.framework */; };
 		CA856C0E17F97C1E00E49B37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA856C0D17F97C1E00E49B37 /* UIKit.framework */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA5FDB5D1AFA17670067D293 /* UITextField+DisablePaste.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+DisablePaste.h"; sourceTree = "<group>"; };
+		CA5FDB5E1AFA17670067D293 /* UITextField+DisablePaste.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+DisablePaste.m"; sourceTree = "<group>"; };
 		CA856C0617F97C1E00E49B37 /* MVCAndKVO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVCAndKVO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA856C0917F97C1E00E49B37 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CA856C0B17F97C1E00E49B37 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -127,6 +130,8 @@
 				CA856C3F17F97C3800E49B37 /* PersonModule.m */,
 				CA856C4117F97C6400E49B37 /* PersonView.h */,
 				CA856C4217F97C6400E49B37 /* PersonView.m */,
+				CA5FDB5D1AFA17670067D293 /* UITextField+DisablePaste.h */,
+				CA5FDB5E1AFA17670067D293 /* UITextField+DisablePaste.m */,
 				CA856C2117F97C1E00E49B37 /* Images.xcassets */,
 				CA856C1017F97C1E00E49B37 /* Supporting Files */,
 			);
@@ -206,7 +211,7 @@
 		CA856BFE17F97C1E00E49B37 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = Guanglu;
 				TargetAttributes = {
 					CA856C2617F97C1E00E49B37 = {
@@ -259,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA5FDB5F1AFA17670067D293 /* UITextField+DisablePaste.m in Sources */,
 				CA856C2017F97C1E00E49B37 /* ViewController.m in Sources */,
 				CA856C4317F97C6400E49B37 /* PersonView.m in Sources */,
 				CA856C1A17F97C1E00E49B37 /* AppDelegate.m in Sources */,
@@ -317,7 +323,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -356,7 +361,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -414,7 +418,6 @@
 		CA856C3C17F97C1E00E49B37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MVCAndKVO.app/MVCAndKVO";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -437,7 +440,6 @@
 		CA856C3D17F97C1E00E49B37 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MVCAndKVO.app/MVCAndKVO";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -472,6 +474,7 @@
 				CA856C3A17F97C1E00E49B37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CA856C3B17F97C1E00E49B37 /* Build configuration list for PBXNativeTarget "MVCAndKVOTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +483,7 @@
 				CA856C3D17F97C1E00E49B37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
