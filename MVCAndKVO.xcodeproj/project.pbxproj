@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA09DC641C22A78500B292AD /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA09DC631C22A78500B292AD /* Extension.swift */; };
 		CA5FDB5F1AFA17670067D293 /* UITextField+DisablePaste.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5FDB5E1AFA17670067D293 /* UITextField+DisablePaste.m */; };
 		CA856C0A17F97C1E00E49B37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA856C0917F97C1E00E49B37 /* Foundation.framework */; };
 		CA856C0C17F97C1E00E49B37 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA856C0B17F97C1E00E49B37 /* CoreGraphics.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA09DC621C22A78500B292AD /* MVCAndKVO-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MVCAndKVO-Bridging-Header.h"; sourceTree = "<group>"; };
+		CA09DC631C22A78500B292AD /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		CA5FDB5D1AFA17670067D293 /* UITextField+DisablePaste.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+DisablePaste.h"; sourceTree = "<group>"; };
 		CA5FDB5E1AFA17670067D293 /* UITextField+DisablePaste.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+DisablePaste.m"; sourceTree = "<group>"; };
 		CA856C0617F97C1E00E49B37 /* MVCAndKVO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVCAndKVO.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +137,8 @@
 				CA5FDB5E1AFA17670067D293 /* UITextField+DisablePaste.m */,
 				CA856C2117F97C1E00E49B37 /* Images.xcassets */,
 				CA856C1017F97C1E00E49B37 /* Supporting Files */,
+				CA09DC631C22A78500B292AD /* Extension.swift */,
+				CA09DC621C22A78500B292AD /* MVCAndKVO-Bridging-Header.h */,
 			);
 			path = MVCAndKVO;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 			files = (
 				CA5FDB5F1AFA17670067D293 /* UITextField+DisablePaste.m in Sources */,
 				CA856C2017F97C1E00E49B37 /* ViewController.m in Sources */,
+				CA09DC641C22A78500B292AD /* Extension.swift in Sources */,
 				CA856C4317F97C6400E49B37 /* PersonView.m in Sources */,
 				CA856C1A17F97C1E00E49B37 /* AppDelegate.m in Sources */,
 				CA856C4017F97C3800E49B37 /* PersonModule.m in Sources */,
@@ -395,11 +401,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MVCAndKVO/MVCAndKVO-Prefix.pch";
 				INFOPLIST_FILE = "MVCAndKVO/MVCAndKVO-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.guanglu.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MVCAndKVO/MVCAndKVO-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -409,11 +419,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MVCAndKVO/MVCAndKVO-Prefix.pch";
 				INFOPLIST_FILE = "MVCAndKVO/MVCAndKVO-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.guanglu.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MVCAndKVO/MVCAndKVO-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
